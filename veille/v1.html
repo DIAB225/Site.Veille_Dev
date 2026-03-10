@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<title>Collecte, Nettoyage et Analyse des Datasets</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #f9fafc;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f2937;
+    color: white;
+    padding: 15px 40px;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px;
+    background: #2563eb;
+    color: white;
+}
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Article */
+main.article {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+main.article h2 {
+    margin-top: 40px;
+    color: #2563eb;
+}
+
+main.article h3 {
+    margin-top: 30px;
+    color: #1e3a8a;
+}
+
+main.article ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+main.article pre {
+    background: #f3f4f6;
+    padding: 15px;
+    border-left: 4px solid #2563eb;
+    overflow-x: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.pipeline {
+    background: #e0f2fe;
+    padding: 20px;
+    border-left: 6px solid #3b82f6;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f2937;
+    color: white;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Dev Data IA</h2>
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../veille.html">Veille</a></li>
+<li><a href="../masterclass.html">Masterclass</a></li>
+<li><a href="../projets.html">Projets</a></li>
+</ul>
+</nav>
+
+<header>
+<h1>Collecte, Nettoyage et Analyse des Datasets</h1>
+<p>Apprenez le processus complet de traitement des datasets dans la Data Science</p>
+</header>
+
+<main class="article">
+
+<h2>Introduction</h2>
+<p>
+Aujourd’hui, notre sujet porte sur <strong>la collecte, le nettoyage et l’analyse des datasets</strong>. 
+Avant de commencer, il est important de comprendre <strong>ce qu’est un dataset</strong>.
+</p>
+
+<h2>Qu’est-ce qu’un dataset ?</h2>
+<p>
+Un dataset est un ensemble de données organisées autour d’un sujet précis pour les analyser, 
+entraîner un modèle ou produire des statistiques.
+</p>
+
+<p>Il peut être :</p>
+<ul>
+<li>une seule table</li>
+<li>plusieurs tables</li>
+<li>un fichier CSV</li>
+<li>un fichier JSON</li>
+<li>une base de données complète</li>
+</ul>
+
+<p>Exemple pour une étude sur les accidents :</p>
+<ul>
+<li>Date</li>
+<li>Heure</li>
+<li>Commune</li>
+<li>Type de véhicule</li>
+<li>Nombre de morts ou blessés</li>
+<li>Cause de l’accident</li>
+</ul>
+
+<h2>Types de données dans un dataset</h2>
+<ul>
+<li><strong>Données numériques</strong> : nombre de victimes, nombre d'accidents</li>
+<li><strong>Données textuelles</strong> : cause de l'accident</li>
+<li><strong>Données date/heure</strong> : date et heure de l'accident</li>
+<li><strong>Données catégorielles</strong> : commune, type de véhicule</li>
+</ul>
+
+<h2>Le pipeline de traitement des données</h2>
+<div class="pipeline">
+Sources de données → Collecte → Nettoyage → Analyse → Visualisation
+</div>
+
+<h2>La collecte des données</h2>
+<p>
+Cette étape consiste à récupérer les données depuis différentes sources :
+sites web, API, fichiers CSV, formulaires, réseaux sociaux.
+</p>
+
+<h3>Exemple Python pour récupérer une page web</h3>
+<pre>
+import requests
+
+url = "https://example.com"
+response = requests.get(url)
+print(response.text)
+</pre>
+
+<h2>Le nettoyage des données</h2>
+<p>
+Après la collecte, les données doivent être préparées pour l’analyse :
+supprimer doublons, corriger erreurs, remplir valeurs manquantes, uniformiser formats.
+</p>
+
+<h3>Exemple de nettoyage avec Pandas</h3>
+<pre>
+import pandas as pd
+
+df = pd.read_csv("accidents.csv")
+df = df.drop_duplicates()
+df = df.fillna(0)
+</pre>
+
+<h2>L’analyse des données</h2>
+<p>
+Cette étape consiste à extraire des informations utiles du dataset.
+Exemples pour les accidents :
+</p>
+<ul>
+<li>Nombre total d’accidents par jour/mois/année</li>
+<li>Communes les plus touchées</li>
+<li>Nombre total de victimes</li>
+<li>Causes les plus fréquentes</li>
+</ul>
+
+<p>Les résultats peuvent être représentés sous forme de graphiques ou tableaux avec :</p>
+<ul>
+<li>Google Colab</li>
+<li>Pandas</li>
+<li>Plotly</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>
+La collecte, le nettoyage et l’analyse des datasets permettent de transformer
+des données brutes en informations utiles pour comprendre des phénomènes et
+aider à la prise de décision.
+</p>
+
+</main>
+
+<footer>
+<p>© 2026 Dev Data IA</p>
+</footer>
+
+</body>
+</html>

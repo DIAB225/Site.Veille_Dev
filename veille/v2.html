@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<title>Hugging Face : comprendre la plateforme IA</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* navigation */
+
+nav{
+    background:#1f2937;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+/* header */
+
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+/* article */
+
+.article{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:8px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.article h2{
+    color:#2563eb;
+    margin-top:35px;
+}
+
+.article h3{
+    margin-top:25px;
+}
+
+.article ul{
+    padding-left:20px;
+}
+
+.code{
+    background:#111827;
+    color:#e5e7eb;
+    padding:15px;
+    border-radius:6px;
+    margin:15px 0;
+    font-family:monospace;
+}
+
+/* footer */
+
+footer{
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<h2>Dev Data IA</h2>
+
+<ul>
+<li><a href="../index.html">Accueil</a></li>
+<li><a href="../veille.html">Veille</a></li>
+<li><a href="../masterclass.html">Masterclass</a></li>
+<li><a href="../projets.html">Projets</a></li>
+</ul>
+</nav>
+
+<header>
+
+<h1>Hugging Face : comprendre la plateforme et ses outils pour l’IA</h1>
+
+<p>Une introduction aux outils et bibliothèques Hugging Face pour les développeurs IA</p>
+
+</header>
+
+<section class="article">
+
+<h2>Introduction</h2>
+
+<p>
+Dans le domaine de l’intelligence artificielle et du Machine Learning, il est souvent utile
+d’utiliser des modèles déjà entraînés afin de gagner du temps et d’améliorer les performances
+des projets. C’est dans ce contexte que des plateformes comme <strong>Hugging Face</strong>
+sont devenues très populaires.
+</p>
+
+<p>
+Hugging Face est aujourd’hui l’une des plateformes les plus utilisées dans le domaine
+du traitement automatique du langage naturel (NLP) et du Deep Learning.
+</p>
+
+<h2>Qu’est-ce que Hugging Face ?</h2>
+
+<p>
+Hugging Face est une startup française spécialisée dans l’intelligence artificielle
+et le traitement du langage naturel.
+</p>
+
+<p>
+Elle propose une plateforme qui permet aux développeurs et data scientists
+d’accéder à des modèles d’intelligence artificielle pré-entraînés.
+</p>
+
+<p>
+Ces modèles peuvent être utilisés pour différentes tâches comme :
+</p>
+
+<ul>
+<li>analyse de texte</li>
+<li>traduction automatique</li>
+<li>génération de texte</li>
+<li>question réponse</li>
+</ul>
+
+<h2>Les solutions proposées par Hugging Face</h2>
+
+<h3>Transformers</h3>
+
+<p>
+Transformers est la bibliothèque la plus populaire de Hugging Face.
+Elle permet d’utiliser facilement des modèles de Deep Learning
+comme BERT, GPT ou RoBERTa.
+</p>
+
+<h3>Datasets</h3>
+
+<p>
+La bibliothèque Datasets permet d’accéder à de nombreux jeux de données
+pour entraîner ou tester des modèles de Machine Learning.
+</p>
+
+<h3>Tokenizers</h3>
+
+<p>
+Tokenizers permet de préparer le texte avant qu’il soit utilisé par
+les modèles d’intelligence artificielle.
+</p>
+
+<h3>Accelerate</h3>
+
+<p>
+Accelerate facilite l’entraînement des modèles sur différents types
+de matériel comme CPU, GPU ou TPU.
+</p>
+
+<h2>Comment utiliser Hugging Face dans un projet</h2>
+
+<p>
+Un développeur peut utiliser Hugging Face dans plusieurs types de projets :
+</p>
+
+<ul>
+<li>chatbots intelligents</li>
+<li>analyse des avis clients</li>
+<li>traduction automatique</li>
+<li>génération de texte</li>
+<li>résumé automatique de documents</li>
+</ul>
+
+<h2>Tutoriel simple avec Python</h2>
+
+<p>Installer les bibliothèques nécessaires :</p>
+
+<div class="code">
+pip install transformers
+pip install torch
+</div>
+
+<p>Utiliser un modèle pré-entraîné :</p>
+
+<div class="code">
+from transformers import pipeline
+
+generator = pipeline("text-generation")
+
+result = generator("L'intelligence artificielle va", max_length=50)
+
+print(result)
+</div>
+
+<h2>Les limites de Hugging Face</h2>
+
+<ul>
+<li>certains modèles nécessitent beaucoup de ressources GPU</li>
+<li>les performances varient selon les modèles</li>
+<li>la recherche de modèles peut parfois être difficile</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>
+Hugging Face est aujourd’hui l’une des plateformes les plus importantes
+dans le domaine de l’intelligence artificielle et du NLP.
+</p>
+
+<p>
+Grâce à ses bibliothèques open source et à sa plateforme collaborative,
+elle permet aux développeurs d’intégrer facilement des modèles d’IA
+dans leurs projets.
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Dev Data IA</p>
+
+</footer>
+
+</body>
+</html>

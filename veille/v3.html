@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<title>Agent IA : comprendre les agents intelligents</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.article{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:8px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.article h2{
+    color:#2563eb;
+    margin-top:35px;
+}
+
+.code{
+    background:#111827;
+    color:#e5e7eb;
+    padding:15px;
+    border-radius:6px;
+    font-family:monospace;
+    margin:20px 0;
+}
+
+ul{
+    padding-left:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#1f2937;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Agent IA : comprendre les agents intelligents</h1>
+
+<p>Introduction aux agents d’intelligence artificielle et exemple de création en Python</p>
+
+</header>
+
+<section class="article">
+
+<h2>Introduction</h2>
+
+<p>
+L'intelligence artificielle évolue rapidement et de nouvelles approches apparaissent
+pour rendre les systèmes plus autonomes. Parmi ces approches, on retrouve
+les <strong>agents IA</strong>.
+</p>
+
+<p>
+Un agent IA est un programme capable de percevoir son environnement,
+prendre des décisions et agir afin d’atteindre un objectif.
+</p>
+
+<p>
+Aujourd’hui, les agents IA sont utilisés dans plusieurs domaines :
+</p>
+
+<ul>
+<li>chatbots intelligents</li>
+<li>assistants virtuels</li>
+<li>automatisation de tâches</li>
+<li>robots autonomes</li>
+<li>agents capables d’utiliser des outils</li>
+</ul>
+
+<h2>Qu’est-ce qu’un agent IA ?</h2>
+
+<p>
+Un agent IA est un système qui analyse les informations de son environnement
+et prend des décisions automatiquement.
+</p>
+
+<p>
+Il fonctionne généralement selon ce principe :
+</p>
+
+<ul>
+<li>observer l’environnement</li>
+<li>analyser les informations</li>
+<li>prendre une décision</li>
+<li>agir</li>
+</ul>
+
+<p>
+Par exemple, un assistant comme un chatbot peut recevoir une question,
+analyser la demande de l’utilisateur et générer une réponse.
+</p>
+
+<h2>Les composants d’un agent IA</h2>
+
+<p>Un agent IA est généralement composé de plusieurs éléments :</p>
+
+<ul>
+<li><strong>Perception</strong> : collecte des informations</li>
+<li><strong>Raisonnement</strong> : analyse et prise de décision</li>
+<li><strong>Action</strong> : interaction avec l’environnement</li>
+<li><strong>Mémoire</strong> : stockage des informations</li>
+</ul>
+
+<h2>Exemples d’agents IA</h2>
+
+<p>Voici quelques exemples d'agents IA utilisés aujourd’hui :</p>
+
+<ul>
+<li>assistants vocaux</li>
+<li>chatbots de service client</li>
+<li>agents de trading</li>
+<li>agents d'automatisation de tâches</li>
+</ul>
+
+<h2>Tutoriel : créer un agent IA simple avec Python</h2>
+
+<p>
+Nous allons créer un agent simple qui répond à une question
+en utilisant un modèle d’intelligence artificielle.
+</p>
+
+<h3>1. Installer les bibliothèques</h3>
+
+<div class="code">
+pip install transformers
+pip install torch
+</div>
+
+<h3>2. Code Python de l’agent</h3>
+
+<div class="code">
+from transformers import pipeline
+
+agent = pipeline("text-generation")
+
+question = "Explique l'intelligence artificielle"
+
+response = agent(question, max_length=50)
+
+print(response)
+</div>
+
+<p>
+Cet agent utilise un modèle de génération de texte
+pour produire une réponse automatiquement.
+</p>
+
+<h2>Applications des agents IA</h2>
+
+<p>Les agents IA peuvent être utilisés pour :</p>
+
+<ul>
+<li>automatiser le support client</li>
+<li>analyser des données</li>
+<li>gérer des tâches répétitives</li>
+<li>aider les développeurs</li>
+</ul>
+
+<h2>Conclusion</h2>
+
+<p>
+Les agents IA représentent une évolution importante dans le domaine
+de l’intelligence artificielle. Ils permettent de créer des systèmes
+capables d’agir de manière autonome pour accomplir des tâches complexes.
+</p>
+
+<p>
+Avec les outils modernes comme Python, les modèles de Machine Learning
+et les plateformes d’IA, il devient de plus en plus facile pour
+les développeurs de créer leurs propres agents intelligents.
+</p>
+
+</section>
+
+<footer>
+
+<p>© 2026 Dev Data IA</p>
+
+</footer>
+
+</body>
+</html>

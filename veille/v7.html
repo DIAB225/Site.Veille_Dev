@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comprendre l’IA et la formation des modèles</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f6fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* TITRES */
+h2 {
+    margin-top: 30px;
+    color: #1f2937;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #374151;
+}
+
+/* PARAGRAPHES */
+p {
+    margin: 10px 0;
+}
+
+/* LISTES */
+ul {
+    margin-left: 20px;
+}
+
+/* CODE */
+code {
+    background: #eee;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+pre {
+    background: #111827;
+    color: #00ffcc;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* BOX INFO */
+.info-box {
+    background: #e0f2fe;
+    border-left: 5px solid #0284c7;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #111827;
+    color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🧠 Comprendre l’IA et la formation des modèles</h1>
+</header>
+
+<div class="container">
+
+<h2>Introduction</h2>
+<p>
+L’intelligence artificielle (IA) consiste à développer des systèmes capables d’accomplir des tâches
+qui nécessitent normalement une intelligence humaine, comme l’apprentissage, la résolution de problèmes
+ou la prise de décision.
+</p>
+
+<p>
+Un modèle d’IA est un ensemble d’algorithmes capables de faire des prédictions à partir de données.
+L’apprentissage automatique permet aux machines d’apprendre et de s’améliorer automatiquement.
+</p>
+
+<h2>📊 Comment un modèle apprend ?</h2>
+<p>Un modèle apprend comme un enfant :</p>
+<ul>
+<li>Observation</li>
+<li>Identification de caractéristiques</li>
+<li>Correction des erreurs</li>
+</ul>
+
+<div class="info-box">
+👉 Avec assez de données, le modèle devient un prédicteur très performant.
+</div>
+
+<h2>🏗️ Entraîner un modèle</h2>
+
+<h3>1. Depuis zéro</h3>
+<ul>
+<li>Beaucoup de données</li>
+<li>Très coûteux</li>
+</ul>
+
+<h3>2. Fine-tuning</h3>
+<ul>
+<li>Utilise un modèle existant</li>
+<li>Plus rapide</li>
+<li>Moins de données</li>
+</ul>
+
+<h2>⚙️ Préparation</h2>
+
+<h3>Choisir le bon modèle</h3>
+<ul>
+<li>Alignement avec la tâche</li>
+<li>Taille du modèle</li>
+<li>Métriques</li>
+</ul>
+
+<h3>📂 Données</h3>
+<ul>
+<li>Nettoyage</li>
+<li>Annotation</li>
+<li>Diversité</li>
+</ul>
+
+<h2>💻 Environnement</h2>
+<p>
+Utilise des frameworks comme TensorFlow ou PyTorch et du matériel puissant (GPU).
+</p>
+
+<h2>🚀 Tutoriel : Fine-tuning</h2>
+
+<h3>1. Format des données</h3>
+<pre>
+{"messages": [
+  {"role": "system", "content": "..."},
+  {"role": "user", "content": "..."},
+  {"role": "assistant", "content": "..."}
+]}
+</pre>
+
+<h3>2. Installation</h3>
+<pre>
+pip install openai
+</pre>
+
+<h3>3. Code Python</h3>
+<pre>
+from openai import OpenAI
+client = OpenAI(api_key="VOTRE_API_KEY")
+</pre>
+
+<h2>📈 Amélioration</h2>
+<ul>
+<li>Améliorer les données</li>
+<li>Ajuster les paramètres</li>
+</ul>
+
+<h2>⚠️ Pièges</h2>
+<ul>
+<li>Overfitting</li>
+<li>Underfitting</li>
+<li>Oubli catastrophique</li>
+</ul>
+
+<h2>🧪 Techniques avancées</h2>
+<ul>
+<li>LoRA / QLoRA</li>
+<li>Transfer Learning</li>
+<li>Reinforcement Learning</li>
+</ul>
+
+<h2>⚖️ Éthique</h2>
+<p>
+Attention aux biais et aux résultats incorrects. Toujours tester le modèle.
+</p>
+
+<h2>🧾 Conclusion</h2>
+<p>
+Le succès d’un modèle d’IA dépend principalement de la qualité des données et du bon entraînement.
+</p>
+
+</div>
+
+<footer>
+    <p>© 2026 - Mon Blog IA</p>
+</footer>
+
+</body>
+</html>

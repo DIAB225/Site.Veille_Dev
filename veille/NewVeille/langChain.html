@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LangChain : Guide complet</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(120deg, #10b981, #3b82f6);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    margin-top: -40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 40px;
+    color: #111827;
+}
+
+h3 {
+    margin-top: 25px;
+    color: #1f2937;
+}
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+.box {
+    background: #ecfdf5;
+    border-left: 5px solid #10b981;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.warning {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>🤖 LangChain : Guide complet</h1>
+<p>Créer des applications IA avec les LLM</p>
+</header>
+
+<div class="container">
+
+<h2>📌 Qu’est-ce que LangChain ?</h2>
+
+<p>
+LangChain est un framework open source qui permet de créer des applications basées sur des modèles de langage (LLM) comme ceux utilisés dans les chatbots ou les agents IA.
+</p>
+
+<p>
+Disponible en Python et JavaScript, il fournit des outils pour connecter facilement des modèles d’intelligence artificielle à des données, des API et des workflows.
+</p>
+
+<div class="box">
+👉 LangChain agit comme un “chef d’orchestre” pour relier les LLM à tout un écosystème.
+</div>
+
+---
+
+<h2>🚀 Pourquoi utiliser LangChain ?</h2>
+
+<ul>
+<li>Créer rapidement des chatbots intelligents</li>
+<li>Connecter un LLM à des données externes</li>
+<li>Comparer plusieurs modèles facilement</li>
+<li>Construire des agents IA autonomes</li>
+</ul>
+
+---
+
+<h2>🧠 Comment fonctionne LangChain ?</h2>
+
+<p>
+LangChain repose sur un principe clé : l’abstraction. Il simplifie des tâches complexes en composants réutilisables.
+</p>
+
+<p>
+Ces composants peuvent être combinés pour créer des applications complètes sans avoir à tout coder manuellement.
+</p>
+
+---
+
+<h2>🔗 Les composants principaux</h2>
+
+<h3>📥 Les modèles de langage (LLM)</h3>
+<p>
+LangChain permet d’utiliser différents modèles comme GPT, LLaMA ou d’autres modèles open source.
+</p>
+
+<p>
+Il suffit généralement d’une clé API pour les intégrer.
+</p>
+
+---
+
+<h3>✍️ Les prompts</h3>
+<p>
+Les prompts sont les instructions envoyées au modèle.
+</p>
+
+<p>
+LangChain permet de créer des templates réutilisables pour structurer les requêtes.
+</p>
+
+<div class="box">
+👉 Exemple : donner un contexte + une instruction + un format de réponse.
+</div>
+
+---
+
+<h3>🔄 Les chaînes (Chains)</h3>
+<p>
+Les chaînes permettent d’enchaîner plusieurs étapes :
+</p>
+
+<ul>
+<li>Envoyer une requête</li>
+<li>Traiter la réponse</li>
+<li>Utiliser cette réponse pour une autre action</li>
+</ul>
+
+<p>
+Cela permet de créer des workflows intelligents.
+</p>
+
+---
+
+<h3>📚 Les données externes (Index)</h3>
+<p>
+Les LLM ne connaissent pas tout. LangChain permet de connecter :
+</p>
+
+<ul>
+<li>documents</li>
+<li>bases de données</li>
+<li>fichiers</li>
+<li>API</li>
+</ul>
+
+---
+
+<h3>🧩 Les bases vectorielles</h3>
+<p>
+Les données sont transformées en vecteurs pour permettre une recherche rapide et intelligente.
+</p>
+
+---
+
+<h3>🧠 Mémoire</h3>
+<p>
+LangChain permet de garder un historique des conversations.
+</p>
+
+<ul>
+<li>Mémoire complète</li>
+<li>Résumé</li>
+<li>Derniers échanges</li>
+</ul>
+
+---
+
+<h3>🛠️ Les outils</h3>
+<p>
+Les outils permettent aux agents d’interagir avec le monde réel :
+</p>
+
+<ul>
+<li>Google Search</li>
+<li>Weather API</li>
+<li>Wikipedia</li>
+<li>Calculs mathématiques</li>
+</ul>
+
+---
+
+<h2>🤖 Les agents IA</h2>
+
+<p>
+Les agents sont des systèmes capables de :
+</p>
+
+<ul>
+<li>prendre des décisions</li>
+<li>utiliser des outils</li>
+<li>exécuter plusieurs étapes</li>
+</ul>
+
+<p>
+Contrairement à un simple chatbot, un agent peut planifier et agir.
+</p>
+
+<div class="box">
+👉 Exemple : un agent peut lire une demande, chercher des infos, puis envoyer un email automatiquement.
+</div>
+
+---
+
+<h2>🔗 Intégration avec les LLM</h2>
+
+<p>
+Un LLM seul ne suffit pas. Il doit être intégré dans une application :
+</p>
+
+<ul>
+<li>interface utilisateur</li>
+<li>données externes</li>
+<li>API</li>
+</ul>
+
+<p>
+LangChain simplifie cette intégration.
+</p>
+
+---
+
+<h2>⚡ Cas d’utilisation</h2>
+
+<ul>
+<li>Chatbots intelligents</li>
+<li>Résumé automatique de texte</li>
+<li>Réponse à des questions</li>
+<li>Analyse de données</li>
+<li>Agents automatisés</li>
+</ul>
+
+---
+
+<h2>⚙️ Installation</h2>
+
+<pre>
+pip install langchain
+</pre>
+
+<p>
+LangChain est open source et disponible sur GitHub.
+</p>
+
+---
+
+<h2>🔥 Avantages</h2>
+
+<ul>
+<li>Rapide à développer</li>
+<li>Modulaire</li>
+<li>Compatible avec plusieurs LLM</li>
+<li>Facile à tester</li>
+</ul>
+
+---
+
+<h2>⚠️ Limites</h2>
+
+<ul>
+<li>Moins de contrôle à cause de l’abstraction</li>
+<li>Peut être complexe pour débutants</li>
+</ul>
+
+<div class="warning">
+⚠️ Important : LangChain simplifie, mais ne remplace pas la compréhension des LLM.
+</div>
+
+---
+
+<h2>🧾 Conclusion</h2>
+
+<p>
+LangChain est un outil essentiel pour développer des applications modernes basées sur l’IA. Il permet de connecter facilement les modèles de langage avec des données, des outils et des workflows.
+</p>
+
+<div class="box">
+👉 C’est aujourd’hui un des frameworks les plus utilisés pour créer des agents IA.
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 - Blog Tech</p>
+</footer>
+
+</body>
+</html>

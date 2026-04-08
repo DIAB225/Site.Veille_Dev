@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Mon Blog IA</title>
+
+<style>
+
+/* GLOBAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+header {
+    background: #111827;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* NAV */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #9ca3af;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* SECTION */
+.container {
+    padding: 40px;
+}
+
+/* GRID */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.article-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border-top: 4px solid #4f46e5;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card h3 {
+    margin-top: 0;
+}
+
+.article-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.article-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #4f46e5;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.article-card a:hover {
+    background: #3730a3;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: white;
+    margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Mon Blog IA</h1>
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Articles</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>Mes Articles</h2>
+
+    <div class="articles">
+
+        <!-- DATASET -->
+        <div class="article-card">
+            <h3>Collecte, Nettoyage et Analyse des Datasets</h3>
+            <p>
+            Introduction aux datasets et aux étapes principales
+            de traitement des données en data science.
+            </p>
+            <a href="veille/v1.html">Lire l'article</a>
+        </div>
+
+        <!-- AGENT IA -->
+        <div class="article-card">
+            <h3>Agent IA : comprendre les agents intelligents</h3>
+            <p>
+            Découvrez ce qu'est un agent d’intelligence artificielle,
+            comment il fonctionne et comment en créer un.
+            </p>
+            <a href="veille/v3.html">Lire l'article</a>
+        </div>
+
+        <!-- LANGCHAIN -->
+        <div class="article-card">
+            <h3>LangChain : créer des applications avec les LLM</h3>
+            <p>
+            Apprenez à utiliser LangChain pour développer
+            des applications IA avec chaînes, mémoire et outils.
+            </p>
+            <a href="veille/langchain.html">Lire l'article</a>
+        </div>
+
+        <!-- LANGGRAPH -->
+        <div class="article-card">
+            <h3>LangGraph : comprendre les workflows d’agents IA</h3>
+            <p>
+            Découvrez comment créer des systèmes multi-agents
+            avec des graphes et une gestion avancée des workflows.
+            </p>
+            <a href="veille/langgraph.html">Lire l'article</a>
+        </div>
+
+        <!-- HEBERGEMENT -->
+        <div class="article-card">
+            <h3>Guide sur l’hébergement Web</h3>
+            <p>
+            Comprenez comment choisir un serveur d’hébergement
+            selon votre technologie (Python, PHP, etc.).
+            </p>
+            <a href="veille/hebergement.html">Lire l'article</a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Mon Blog IA - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>

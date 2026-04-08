@@ -2,179 +2,162 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Mon Blog IA</title>
+<title>LangGraph : workflows d’agents IA</title>
 
 <style>
 
 /* GLOBAL */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     background: #f4f6f9;
-}
-
-/* HEADER */
-header {
-    background: #111827;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
     margin: 0;
+    padding: 0;
 }
 
-/* NAV */
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    color: #9ca3af;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: white;
-}
-
-/* SECTION */
-.container {
-    padding: 40px;
-}
-
-/* GRID */
-.articles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-/* CARD */
-.article-card {
+/* CONTAINER */
+.article-container {
+    max-width: 900px;
+    margin: 40px auto;
     background: white;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
-    border-top: 4px solid #4f46e5;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.article-card:hover {
-    transform: translateY(-5px);
+/* TITLE */
+h1 {
+    color: #111827;
 }
 
-.article-card h3 {
-    margin-top: 0;
+/* SUBTITLE */
+h2 {
+    margin-top: 30px;
+    color: #4f46e5;
 }
 
-.article-card p {
-    color: #555;
-    font-size: 14px;
+/* TEXT */
+p {
+    line-height: 1.7;
+    color: #333;
 }
 
-.article-card a {
+/* LIST */
+ul {
+    margin-left: 20px;
+}
+
+/* BACK LINK */
+.back {
     display: inline-block;
-    margin-top: 10px;
+    margin-bottom: 20px;
     text-decoration: none;
-    background: #4f46e5;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
+    color: #4f46e5;
 }
 
-.article-card a:hover {
-    background: #3730a3;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #111827;
-    color: white;
-    margin-top: 40px;
+.back:hover {
+    text-decoration: underline;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
-    <h1>Mon Blog IA</h1>
-    <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Articles</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+<div class="article-container">
 
-<div class="container">
+<a href="../index.html" class="back">← Retour aux articles</a>
 
-    <h2>Mes Articles</h2>
+<h1>LangGraph : comprendre les workflows d’agents IA</h1>
 
-    <div class="articles">
+<p>
+LangGraph est un framework open source basé sur LangChain qui permet de créer,
+organiser et gérer des workflows d’agents d’intelligence artificielle.
+Il utilise une architecture en graphe pour structurer les différentes étapes d’un système IA.
+</p>
 
-        <!-- DATASET -->
-        <div class="article-card">
-            <h3>Collecte, Nettoyage et Analyse des Datasets</h3>
-            <p>
-            Introduction aux datasets et aux étapes principales
-            de traitement des données en data science.
-            </p>
-            <a href="veille/v1.html">Lire l'article</a>
-        </div>
+<h2>Qu’est-ce que LangGraph ?</h2>
+<p>
+LangGraph permet de représenter un système IA sous forme de graphe :
+chaque étape est un nœud et chaque connexion est un lien entre ces étapes.
+On peut le voir comme une carte intelligente où l’utilisateur construit
+le chemin que l’IA doit suivre.
+</p>
 
-        <!-- AGENT IA -->
-        <div class="article-card">
-            <h3>Agent IA : comprendre les agents intelligents</h3>
-            <p>
-            Découvrez ce qu'est un agent d’intelligence artificielle,
-            comment il fonctionne et comment en créer un.
-            </p>
-            <a href="veille/v3.html">Lire l'article</a>
-        </div>
+<h2>Comment fonctionne LangGraph ?</h2>
+<p>
+LangGraph fonctionne avec des workflows. Chaque workflow est une suite
+d’actions exécutées par des agents IA. Ces actions peuvent analyser une demande,
+appeler un modèle IA ou utiliser un outil externe.
+</p>
 
-        <!-- LANGCHAIN -->
-        <div class="article-card">
-            <h3>LangChain : créer des applications avec les LLM</h3>
-            <p>
-            Apprenez à utiliser LangChain pour développer
-            des applications IA avec chaînes, mémoire et outils.
-            </p>
-            <a href="veille/langchain.html">Lire l'article</a>
-        </div>
+<h2>La gestion de l’état (mémoire)</h2>
+<p>
+LangGraph possède une mémoire appelée “état” qui permet de suivre
+les informations et les étapes du processus. Cela rend le système
+plus intelligent et plus facile à comprendre.
+</p>
 
-        <!-- LANGGRAPH -->
-        <div class="article-card">
-            <h3>LangGraph : comprendre les workflows d’agents IA</h3>
-            <p>
-            Découvrez comment créer des systèmes multi-agents
-            avec des graphes et une gestion avancée des workflows.
-            </p>
-            <a href="veille/langgraph.html">Lire l'article</a>
-        </div>
+<h2>Les composants principaux</h2>
 
-        <!-- HEBERGEMENT -->
-        <div class="article-card">
-            <h3>Guide sur l’hébergement Web</h3>
-            <p>
-            Comprenez comment choisir un serveur d’hébergement
-            selon votre technologie (Python, PHP, etc.).
-            </p>
-            <a href="veille/hebergement.html">Lire l'article</a>
-        </div>
+<ul>
+<li><strong>Nœuds :</strong> représentent les actions ou agents</li>
+<li><strong>Edges :</strong> définissent les connexions</li>
+<li><strong>Graphes avec état :</strong> conservent les informations</li>
+<li><strong>Graphes cycliques :</strong> permettent de répéter des actions</li>
+</ul>
 
-    </div>
+<h2>Human-in-the-loop</h2>
+<p>
+LangGraph permet d’intégrer un humain dans le processus pour améliorer
+les décisions et corriger les erreurs du système.
+</p>
+
+<h2>Les outils et le RAG</h2>
+<p>
+LangGraph peut utiliser des API, des bases de données et le RAG
+(Retrieval Augmented Generation) pour récupérer des informations
+externes et améliorer les réponses.
+</p>
+
+<h2>Workflows multi-agents</h2>
+<p>
+LangGraph permet de créer plusieurs agents qui travaillent ensemble.
+Chaque agent peut avoir un rôle spécifique et exécuter des tâches
+différentes.
+</p>
+
+<h2>Les avantages</h2>
+
+<ul>
+<li>Meilleure prise de décision</li>
+<li>Grande flexibilité</li>
+<li>Bonne performance</li>
+<li>Gestion de systèmes complexes</li>
+</ul>
+
+<h2>Cas d’utilisation</h2>
+
+<ul>
+<li>Chatbots intelligents</li>
+<li>Systèmes automatisés</li>
+<li>Applications IA avancées</li>
+</ul>
+
+<h2>LangGraph Studio</h2>
+<p>
+LangGraph Studio est une interface visuelle qui permet de créer
+des workflows sans coder et de visualiser facilement les systèmes.
+</p>
+
+<h2>Conclusion</h2>
+<p>
+LangGraph est un outil puissant pour construire des systèmes IA
+complexes et modernes. Il permet de structurer les agents,
+gérer les workflows et améliorer les performances globales.
+</p>
 
 </div>
-
-<footer>
-    <p>© 2026 Mon Blog IA - Tous droits réservés</p>
-</footer>
 
 </body>
 </html>
